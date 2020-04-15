@@ -11,6 +11,7 @@ public class Restart : Node2D
 	public override void _Process(float delta)
 	{
 		if(Input.IsActionPressed("Restart")){
+			GetNode<Import>("../../Node2D").running=false;
 			GetTree().ReloadCurrentScene();
 			GD.Print("reloading");
 		}

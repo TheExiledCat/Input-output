@@ -6,6 +6,10 @@ using System.Threading;
 
 public class Import : Node2D
 {
+	bool running=true;
+	
+
+	
    static SerialPort _serialPort;
 
 	public int  number;// dit wordt de %
@@ -25,7 +29,8 @@ public class Import : Node2D
   // Called every frame. 'delta' is the elapsed time since the previous frame.
   public override void _Process(float delta)
  {
-	//if(Int32.Parse (_serialPort.ReadExisting()) != null){
+	 if(running){
+		 //if(Int32.Parse (_serialPort.ReadExisting()) != null){
 	  int a = _serialPort.ReadByte();
 			
 				GD.Print(a);
@@ -34,4 +39,6 @@ public class Import : Node2D
 				
 				
 	  }
+	 }
+	
 }
