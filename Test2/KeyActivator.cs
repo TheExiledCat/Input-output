@@ -15,7 +15,8 @@ public class KeyActivator : StaticBody2D
     }
     public void Activate(){
         key.Appear();
-        QueueFree();
+        GetNode<Sprite>("Sprite").Visible=false;
+        GetNode<CollisionShape2D>("CollisionShape2D").Disabled=true;
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

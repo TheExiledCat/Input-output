@@ -81,11 +81,13 @@ timer++;
 		
 	}
 	void RecordPosition(){
-		positions.Add(Position);
-		if( positions.Count==100){
-			            Restart r = new Restart();
-						r.retry();
-		}
-			
+		
+		
+			positions.Add(Position);
+		
+		
+		if(positions.Count>100)
+		GetNode<Restart>("../Restart").retry();
+		GD.Print(positions.Count);
 	}
 }

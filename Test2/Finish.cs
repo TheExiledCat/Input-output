@@ -19,6 +19,7 @@ public class Finish : StaticBody2D
         player.Position=NextPos;
         player.keys=0;
         player.mana=0;
+        player.positions.Clear();
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
