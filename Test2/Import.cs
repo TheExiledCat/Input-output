@@ -20,10 +20,13 @@ public class Import : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready() 
 	{		
-			 _serialPort = new SerialPort();
+		 _serialPort = new SerialPort();
+		
 			_serialPort.PortName = "COM6";//Set your board COM
 			_serialPort.BaudRate = 9600;
 			_serialPort.Open();
+			
+			
 	}
 
   // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,10 +42,7 @@ public class Import : Node2D
 				
 				
 	  }
-	 else
-	 {
-		 _serialPort=null;
-	 }
+
 	
 }
 }
