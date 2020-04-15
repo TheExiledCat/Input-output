@@ -9,7 +9,7 @@ public class Hologram : Node2D
 		player=GetNode<Movement>("../Player");
 	}
 	public override void _Process(float delta){
-amount=(int)Mathf.Ceil((float)((player.positions.Count-1)*GetNode<Import>("../../Node2D").number)); 
+amount=(int)Mathf.Ceil((float)((player.positions.Count-1)*GetNode<Import>("../../Node2D").number/100)); 
 		
 		
 		if(player.positions.Count>0){
