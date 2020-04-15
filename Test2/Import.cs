@@ -25,12 +25,12 @@ public class Import : Node2D
   // Called every frame. 'delta' is the elapsed time since the previous frame.
   public override void _Process(float delta)
  {
-	if(Int32.Parse (_serialPort.ReadExisting()) != null){
-	  string a = _serialPort.ReadExisting();
+	//if(Int32.Parse (_serialPort.ReadExisting()) != null){
+	  int a = _serialPort.ReadByte();
 			
 				GD.Print(a);
-			 number= Int32.Parse(a);
-			}	
+			  number= a;
+		//	}	
 				
 				
 	  }
