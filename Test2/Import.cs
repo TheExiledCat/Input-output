@@ -39,9 +39,10 @@ public class Import : Node2D
 				
 				
 	  }
-	 }else
+	 else
 	 {
 		 _serialPort.Close();
 	 }
 	
+}
 }
