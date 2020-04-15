@@ -12,7 +12,7 @@ public class Restart : Node2D
 	{
 		if(Input.IsActionPressed("Restart")){
 			GetNode<Import>("../../Node2D").running=false;
-			GetTree().ReloadCurrentScene();
+			GD.Print(GetNode<Import>("../../Node2D").running);			GetTree().ReloadCurrentScene();
 			GD.Print("reloading");
 		}
 	}

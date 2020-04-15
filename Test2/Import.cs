@@ -6,7 +6,7 @@ using System.Threading;
 
 public class Import : Node2D
 {
-	bool running=true;
+	public bool running=true;
 	
 
 	
