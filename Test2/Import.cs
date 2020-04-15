@@ -23,6 +23,7 @@ public class Import : Node2D
 			 _serialPort = new SerialPort();
 			_serialPort.PortName = "COM6";//Set your board COM
 			_serialPort.BaudRate = 9600;
+			_serialPort.Close();
 			_serialPort.Open();
 	}
 
@@ -39,9 +40,6 @@ public class Import : Node2D
 				
 				
 	  }
-	 }else
-	 {
-		 _serialPort=null;
 	 }
 	
 }
