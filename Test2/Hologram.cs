@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 public class Hologram : Node2D
 {
-	Movement player;
+	Player player;
 	int  amount;
 	public override void _Ready(){
-		player=GetNode<Movement>("../Player");
+		player=GetNode<Player>("../Player");
 	}
 	public override void _Process(float delta){
-amount=(int)Mathf.Ceil((float)((player.positions.Count-1)*GetNode<Import>("../../Node2D").number/100)); 
+amount=player.amount;
 		
 		
 		if(player.positions.Count>0){

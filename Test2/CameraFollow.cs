@@ -14,7 +14,7 @@ public class CameraFollow : Camera2D
 	 [Export] public float y ;//= 200;
 
 public override void _Ready(){
-	target=GetNode<Movement>("../Player");
+	target=GetNode<Player>("../Player");
 }
 
   // Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -6,7 +6,7 @@ using System.Threading;
 
 public class Import : Node2D
 {
-	public bool running=true;
+	public bool running=false;
 	
 
 	
@@ -19,8 +19,8 @@ public class Import : Node2D
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready() 
-	{		
-		 _serialPort = new SerialPort();
+	{		if(running){
+ 			_serialPort = new SerialPort();
 		
 			_serialPort.PortName = "COM6";//Set your board COM
 			_serialPort.BaudRate = 9600;
@@ -28,12 +28,14 @@ public class Import : Node2D
 			
 			
 	}
+		
+	}
 
   // Called every frame. 'delta' is the elapsed time since the previous frame.
   public override void _Process(float delta)
  {
 	 if(running){
-		 //if(Int32.Parse (_serialPort.ReadExisting()) != null){
+		 
 	  int a = _serialPort.ReadByte();
 			
 				GD.Print(a);
